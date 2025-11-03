@@ -5,7 +5,7 @@
 // Links de pago de Hotmart configurados
 const PAYMENT_LINKS = {
     mainProduct: 'https://pay.hotmart.com/V99799664T?checkoutMode=10', // Link de pago del ebook principal ($9.99)
-    upsellProduct: '#' // Link de pago del Mini Devocionario ($3.99) - Configura cuando esté disponible
+    upsellProduct: 'https://pay.hotmart.com/V99799664T?checkoutMode=10' // Link de pago del Mini Devocionario ($3.99) - Mismo link por ahora
 };
 
 // Pixel ID de Facebook configurado
