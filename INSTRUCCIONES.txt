@@ -1,0 +1,214 @@
+═══════════════════════════════════════════════════════════════════
+  INSTRUCCIONES DE CONFIGURACIÓN - LANDING PAGE RESPUESTAS CATÓLICAS
+═══════════════════════════════════════════════════════════════════
+
+📋 PASOS OBLIGATORIOS ANTES DE PUBLICAR:
+
+1. CONFIGURAR LINKS DE PAGO DE HOTMART
+   ────────────────────────────────────
+   Archivo: script.js (líneas 8-11)
+   
+   Reemplaza:
+   const PAYMENT_LINKS = {
+       mainProduct: '#',  ← AQUÍ va el link del ebook principal ($9.99)
+       upsellProduct: '#' ← AQUÍ va el link del Mini Devocionario ($3.99)
+   };
+   
+   Por ejemplo:
+   const PAYMENT_LINKS = {
+       mainProduct: 'https://pay.hotmart.com/TU_CODIGO_AQUI',
+       upsellProduct: 'https://pay.hotmart.com/TU_CODIGO_AQUI'
+   };
+
+
+2. CONFIGURAR PIXEL DE FACEBOOK
+   ─────────────────────────────
+   Archivo: index.html (líneas 18-27)
+   
+   Descomenta el código (quita los //) y reemplaza:
+   fbq('init', 'TU_PIXEL_ID_AQUI'); ← AQUÍ va tu Pixel ID
+   
+   Por ejemplo:
+   fbq('init', '123456789012345');
+   
+   ¿Dónde encontrar tu Pixel ID?
+   → Facebook Business Manager > Eventos > Píxeles de datos
+
+
+3. CONFIGURAR GOOGLE ANALYTICS (OPCIONAL)
+   ───────────────────────────────────────
+   Archivo: index.html (cerca de la línea 360)
+   
+   Descomenta el código y reemplaza:
+   gtag('config', 'TU_GA_ID_AQUI'); ← AQUÍ va tu ID de Google Analytics
+   
+   Por ejemplo:
+   gtag('config', 'G-XXXXXXXXXX');
+
+
+═══════════════════════════════════════════════════════════════════
+📝 PERSONALIZACIÓN OPCIONAL:
+═══════════════════════════════════════════════════════════════════
+
+CAMBIAR COLORES:
+────────────────
+Archivo: styles.css (líneas 5-14)
+
+Variables disponibles:
+--color-gold: #D4AF37;        ← Color dorado principal
+--color-blue: #2C5F8D;        ← Color azul mariano
+--color-cream: #F5F1E8;       ← Color crema de fondo
+
+
+CAMBIAR TEXTOS:
+───────────────
+Archivo: index.html
+
+Busca y modifica:
+- Título principal (línea ~40)
+- Subtítulo (línea ~41)
+- Beneficios (líneas ~70-100)
+- Testimonios (líneas ~180-240)
+- Precios (busca "$9.99" y "$3.99")
+
+
+CAMBIAR IMÁGENES:
+─────────────────
+Reemplaza las imágenes en la carpeta /imagenes/ manteniendo los mismos nombres:
+
+- principal.jpeg           → Portada del ebook principal
+- Ebook adicional.png      → Portada del Mini Devocionario
+- bono 1.png              → Imagen del primer bono
+- bono 2.png              → Imagen del segundo bono
+- fotos para la web 1.jpg → Fondo del hero section
+- fotos para la web 2.jpg → Foto testimonial
+- fotos para la web 3.jpg → Foto testimonial
+- fotos para la web 4.jpg → Foto testimonial
+
+
+MODIFICAR NOTIFICACIONES DE PRUEBA SOCIAL:
+──────────────────────────────────────────
+Archivo: script.js (líneas 58-71)
+
+Agrega o modifica las notificaciones:
+{ name: 'Nombre de País', action: 'acaba de comprar...' },
+
+
+═══════════════════════════════════════════════════════════════════
+🚀 CÓMO PUBLICAR LA PÁGINA:
+═══════════════════════════════════════════════════════════════════
+
+OPCIÓN 1: HOSTING TRADICIONAL (cPanel, etc.)
+────────────────────────────────────────────
+1. Comprime todos los archivos en un .zip
+2. Sube el .zip a tu hosting
+3. Descomprime en la carpeta public_html o www
+4. Accede a tu dominio
+
+
+OPCIÓN 2: NETLIFY (GRATIS Y FÁCIL)
+──────────────────────────────────
+1. Ve a https://www.netlify.com
+2. Arrastra la carpeta completa a Netlify
+3. ¡Listo! Tu página estará en línea
+
+
+OPCIÓN 3: GITHUB PAGES (GRATIS)
+───────────────────────────────
+1. Crea un repositorio en GitHub
+2. Sube todos los archivos
+3. Activa GitHub Pages en Settings
+4. Tu página estará en: usuario.github.io/repositorio
+
+
+═══════════════════════════════════════════════════════════════════
+✅ CHECKLIST ANTES DE LANZAR:
+═══════════════════════════════════════════════════════════════════
+
+□ Links de pago configurados en script.js
+□ Pixel de Facebook configurado en index.html
+□ Google Analytics configurado (opcional)
+□ Todas las imágenes cargadas correctamente
+□ Probado en móvil, tablet y computadora
+□ Cronómetro funcionando correctamente
+□ Notificaciones de prueba social apareciendo
+□ Todos los botones redirigen correctamente
+□ Textos revisados sin errores ortográficos
+□ Política de privacidad y términos actualizados
+
+
+═══════════════════════════════════════════════════════════════════
+🔍 CÓMO PROBAR LA PÁGINA:
+═══════════════════════════════════════════════════════════════════
+
+1. PRUEBA LOCAL:
+   - Abre index.html con tu navegador
+   - Verifica que todo se vea bien
+   - Prueba todos los botones
+
+2. PRUEBA EN MÓVIL:
+   - Abre las herramientas de desarrollador (F12)
+   - Activa el modo responsive
+   - Prueba diferentes tamaños de pantalla
+
+3. PRUEBA DE VELOCIDAD:
+   - Ve a https://pagespeed.web.dev
+   - Ingresa tu URL
+   - Optimiza si es necesario
+
+
+═══════════════════════════════════════════════════════════════════
+📊 MÉTRICAS A MONITOREAR:
+═══════════════════════════════════════════════════════════════════
+
+En Facebook Ads Manager:
+- Visitas a la página
+- Tasa de rebote
+- Tiempo en página
+- Conversiones (compras)
+
+En Google Analytics:
+- Usuarios únicos
+- Páginas vistas
+- Tasa de conversión
+- Fuentes de tráfico
+
+
+═══════════════════════════════════════════════════════════════════
+❓ PREGUNTAS FRECUENTES:
+═══════════════════════════════════════════════════════════════════
+
+P: ¿Puedo cambiar el precio?
+R: Sí, busca "$9.99" y "$3.99" en index.html y reemplázalos.
+
+P: ¿Cómo cambio el tiempo del cronómetro?
+R: En script.js, línea 24, cambia (24 * 60 * 60 * 1000) por las horas que desees.
+
+P: ¿Las notificaciones son reales?
+R: Son simuladas. Puedes personalizarlas en script.js.
+
+P: ¿Necesito saber programar?
+R: No, solo sigue estas instrucciones paso a paso.
+
+P: ¿Funciona en WordPress?
+R: Sí, puedes crear una página personalizada o usar un plugin de HTML.
+
+
+═══════════════════════════════════════════════════════════════════
+📞 RECURSOS ÚTILES:
+═══════════════════════════════════════════════════════════════════
+
+• Hotmart: https://hotmart.com
+• Facebook Business: https://business.facebook.com
+• Google Analytics: https://analytics.google.com
+• Netlify: https://www.netlify.com
+• Font Awesome (íconos): https://fontawesome.com
+
+
+═══════════════════════════════════════════════════════════════════
+
+¡Éxito con tu proyecto de evangelización! 🙏✝️
+
+Si tienes dudas, revisa el archivo README.md para más detalles técnicos.
+
+═══════════════════════════════════════════════════════════════════

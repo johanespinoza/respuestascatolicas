@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Configuración Rápida</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #2C5F8D;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        
+        .step {
+            background: #f8f9fa;
+            border-left: 5px solid #D4AF37;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: #D4AF37;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .step h2 {
+            color: #2C5F8D;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        
+        .step p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        
+        .code-box {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .highlight {
+            background: #ffd700;
+            color: #000;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .success {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 10px;
+            margin: 5px 0;
+            background: white;
+            border-radius: 5px;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .checklist li:before {
+            content: "☐ ";
+            font-size: 1.5rem;
+            margin-right: 10px;
+            color: #2C5F8D;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Configuración Rápida</h1>
+        <p class="subtitle">Sigue estos 3 pasos para activar tu landing page</p>
+        
+        <!-- PASO 1 -->
+        <div class="step">
+            <span class="step-number">1</span>
+            <h2>Configurar Links de Pago de Hotmart</h2>
+            <p>Abre el archivo <strong>script.js</strong> y busca las líneas 8-11:</p>
+            
+            <div class="code-box">
+const PAYMENT_LINKS = {
+    mainProduct: <span class="highlight">'#'</span>,  ← Reemplaza con tu link de Hotmart
+    upsellProduct: <span class="highlight">'#'</span> ← Reemplaza con tu link de Hotmart
+};
+            </div>
+            
+            <p><strong>Ejemplo de cómo debe quedar:</strong></p>
+            <div class="code-box">
+const PAYMENT_LINKS = {
+    mainProduct: 'https://pay.hotmart.com/A12345678B',
+    upsellProduct: 'https://pay.hotmart.com/C98765432D'
+};
+            </div>
+            
+            <div class="warning">
+                <strong>⚠️ Importante:</strong> Asegúrate de obtener los links correctos desde tu cuenta de Hotmart. Cada producto debe tener su propio link de pago.
+            </div>
+        </div>
+        
+        <!-- PASO 2 -->
+        <div class="step">
+            <span class="step-number">2</span>
+            <h2>Activar Pixel de Facebook</h2>
+            <p>Abre el archivo <strong>index.html</strong> y busca las líneas 19-31:</p>
+            
+            <div class="code-box">
+&lt;!-- PIXEL DE FACEBOOK - Reemplaza con tu código --&gt;
+&lt;script&gt;
+    <span class="highlight">//</span> !function(f,b,e,v,n,t,s)
+    <span class="highlight">//</span> {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    ...
+    <span class="highlight">//</span> fbq('init', <span class="highlight">'TU_PIXEL_ID_AQUI'</span>);
+    <span class="highlight">//</span> fbq('track', 'PageView');
+&lt;/script&gt;
+            </div>
+            
+            <p><strong>Debes hacer 2 cosas:</strong></p>
+            <ol style="margin-left: 20px; margin-top: 10px;">
+                <li>Eliminar todos los <code>//</code> al inicio de cada línea</li>
+                <li>Reemplazar <code>'TU_PIXEL_ID_AQUI'</code> con tu ID real de Facebook Pixel</li>
+            </ol>
+            
+            <div class="warning">
+                <strong>📍 ¿Dónde encontrar tu Pixel ID?</strong><br>
+                Facebook Business Manager → Eventos → Píxeles de datos → Copiar ID del píxel
+            </div>
+        </div>
+        
+        <!-- PASO 3 -->
+        <div class="step">
+            <span class="step-number">3</span>
+            <h2>Verificar y Publicar</h2>
+            <p>Antes de publicar, verifica que todo esté correcto:</p>
+            
+            <ul class="checklist">
+                <li>Links de pago configurados en script.js</li>
+                <li>Pixel de Facebook activado en index.html</li>
+                <li>Todas las imágenes en la carpeta /imagenes/</li>
+                <li>Probado en navegador (abre index.html)</li>
+                <li>Revisado en móvil (F12 → modo responsive)</li>
+            </ul>
+            
+            <div class="success">
+                <strong>✅ ¡Listo para publicar!</strong><br>
+                Sube todos los archivos a tu hosting o usa Netlify para publicación gratuita.
+            </div>
+        </div>
+        
+        <!-- OPCIONES DE PUBLICACIÓN -->
+        <div class="step">
+            <span class="step-number">💡</span>
+            <h2>Opciones de Publicación</h2>
+            
+            <p><strong>Opción 1: Netlify (Recomendado - Gratis)</strong></p>
+            <ol style="margin-left: 20px; margin-top: 10px;">
+                <li>Ve a <a href="https://www.netlify.com" target="_blank">netlify.com</a></li>
+                <li>Arrastra la carpeta completa del proyecto</li>
+                <li>¡Tu página estará en línea en segundos!</li>
+            </ol>
+            
+            <p style="margin-top: 20px;"><strong>Opción 2: Hosting Tradicional (cPanel)</strong></p>
+            <ol style="margin-left: 20px; margin-top: 10px;">
+                <li>Comprime todos los archivos en un .zip</li>
+                <li>Sube a tu hosting vía FTP o File Manager</li>
+                <li>Descomprime en public_html o www</li>
+            </ol>
+            
+            <p style="margin-top: 20px;"><strong>Opción 3: GitHub Pages (Gratis)</strong></p>
+            <ol style="margin-left: 20px; margin-top: 10px;">
+                <li>Crea un repositorio en GitHub</li>
+                <li>Sube todos los archivos</li>
+                <li>Activa GitHub Pages en Settings</li>
+            </ol>
+        </div>
+        
+        <!-- RECURSOS ADICIONALES -->
+        <div class="step">
+            <span class="step-number">📚</span>
+            <h2>Recursos Adicionales</h2>
+            <p>Para más información detallada, consulta:</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><strong>README.md</strong> - Documentación técnica completa</li>
+                <li><strong>INSTRUCCIONES.txt</strong> - Guía paso a paso detallada</li>
+                <li><strong>script.js</strong> - Comentarios en el código para personalización</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p><strong>¿Necesitas ayuda?</strong></p>
+            <p>Revisa los archivos de documentación o consulta los recursos en línea.</p>
+            <p style="margin-top: 20px;">🙏 ¡Que Dios bendiga tu proyecto de evangelización! ✝️</p>
+        </div>
+    </div>
+</body>
+</html>
