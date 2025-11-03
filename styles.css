@@ -88,7 +88,9 @@ img {
    BOTONES CTA
    =================================== */
 .cta-button {
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
     padding: 1rem 2rem;
     font-size: 1.1rem;
     font-weight: 600;
@@ -330,11 +332,54 @@ img {
 }
 
 /* ===================================
-   3. BONOS GRATUITOS
+   3. ÍNDICE DEL EBOOK
+   =================================== */
+.ebook-index {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-white);
+}
+
+.index-list {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.index-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    background: var(--color-cream);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-gold);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.index-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-sm);
+}
+
+.index-item i {
+    color: var(--color-gold);
+    font-size: 1.2rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.index-item span {
+    color: var(--color-text);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* ===================================
+   4. BONOS GRATUITOS
    =================================== */
 .bonuses {
     padding: var(--spacing-xl) 0;
-    background: var(--color-white);
+    background: var(--color-cream);
 }
 
 .bonuses-grid {
@@ -410,7 +455,7 @@ img {
 }
 
 /* ===================================
-   4. VISTA PREVIA DEL EBOOK
+   5. VISTA PREVIA DEL EBOOK
    =================================== */
 .ebook-preview {
     padding: var(--spacing-xl) 0;
@@ -489,7 +534,7 @@ img {
 }
 
 /* ===================================
-   5. TESTIMONIOS
+   6. TESTIMONIOS
    =================================== */
 .testimonials {
     padding: var(--spacing-xl) 0;
@@ -553,7 +598,7 @@ img {
 }
 
 /* ===================================
-   6. OFERTA COMPLEMENTARIA (UPSELL)
+   7. OFERTA COMPLEMENTARIA (UPSELL)
    =================================== */
 .upsell {
     padding: var(--spacing-xl) 0;
@@ -660,7 +705,7 @@ img {
 }
 
 /* ===================================
-   7. SECCIÓN FINAL DE COMPRA
+   8. SECCIÓN FINAL DE COMPRA
    =================================== */
 .final-cta {
     padding: var(--spacing-xl) 0;
@@ -781,7 +826,7 @@ img {
 }
 
 /* ===================================
-   8. FOOTER
+   9. FOOTER
    =================================== */
 .footer {
     background: var(--color-text);
@@ -823,7 +868,7 @@ img {
 }
 
 /* ===================================
-   9. NOTIFICACIONES DE PRUEBA SOCIAL
+   10. NOTIFICACIONES DE PRUEBA SOCIAL
    =================================== */
 .social-proof-notification {
     position: fixed;
