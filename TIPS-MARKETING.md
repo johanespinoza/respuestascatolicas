@@ -20,7 +20,7 @@
 
 Descubre cómo responder con confianza y amor cristiano.
 
-✅ Más de 50 preguntas respondidas
+✅ 10 preguntas fundamentales respondidas
 ✅ Basado en fuentes católicas auténticas
 ✅ 2 bonos GRATIS incluidos
 
