@@ -104,25 +104,25 @@ img {
 }
 
 .cta-primary {
-    background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+    background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
     color: var(--color-white);
 }
 
 .cta-primary:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
-    background: linear-gradient(135deg, var(--color-gold-dark) 0%, var(--color-gold) 100%);
+    background: linear-gradient(135deg, #1e7e34 0%, #28a745 100%);
 }
 
 .cta-secondary {
-    background: linear-gradient(135deg, var(--color-blue) 0%, var(--color-blue-dark) 100%);
+    background: linear-gradient(135deg, #34ce57 0%, #28a745 100%);
     color: var(--color-white);
 }
 
 .cta-secondary:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
-    background: linear-gradient(135deg, var(--color-blue-dark) 0%, var(--color-blue) 100%);
+    background: linear-gradient(135deg, #28a745 0%, #34ce57 100%);
 }
 
 .cta-upsell {
@@ -137,7 +137,7 @@ img {
 }
 
 .cta-final {
-    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
     color: var(--color-white);
     font-size: 1.3rem;
     padding: 1.2rem 2.5rem;
@@ -146,7 +146,7 @@ img {
 .cta-final:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
-    background: linear-gradient(135deg, #c82333 0%, #dc3545 100%);
+    background: linear-gradient(135deg, #1e7e34 0%, #28a745 100%);
 }
 
 .cta-center {
