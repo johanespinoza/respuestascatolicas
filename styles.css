@@ -1101,3 +1101,9 @@ img {
         font-size: 1.4rem;
     }
 }
+
+/* Estilo para el texto GRATIS en los bonos */
+.gratis-text {
+    color: #28a745;
+    font-weight: bold;
+}
