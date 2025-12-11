@@ -75,16 +75,34 @@ const socialProofData = [
     { name: 'Fernando de Bolivia', action: 'compró el ebook hace 4 minutos' }
 ];
 
-let currentNotificationIndex = 0;
+let usedIndices = [];
 let notificationTimeout;
+
+function getRandomUnusedIndex() {
+    // Si ya usamos todos los índices, reiniciamos
+    if (usedIndices.length >= socialProofData.length) {
+        usedIndices = [];
+    }
+    
+    // Buscar un índice que no se haya usado
+    let randomIndex;
+    do {
+        randomIndex = Math.floor(Math.random() * socialProofData.length);
+    } while (usedIndices.includes(randomIndex));
+    
+    // Agregar el índice a los usados
+    usedIndices.push(randomIndex);
+    return randomIndex;
+}
 
 function showSocialProof() {
     const notification = document.getElementById('socialProof');
     const buyerName = document.getElementById('buyerName');
     const buyerAction = document.getElementById('buyerAction');
     
-    // Obtener datos aleatorios
-    const data = socialProofData[currentNotificationIndex];
+    // Obtener datos aleatorios sin repetición
+    const currentIndex = getRandomUnusedIndex();
+    const data = socialProofData[currentIndex];
     
     // Actualizar contenido
     buyerName.textContent = data.name;
@@ -97,11 +115,8 @@ function showSocialProof() {
     notificationTimeout = setTimeout(() => {
         notification.classList.remove('show');
         
-        // Siguiente notificación después de 15 segundos
-        setTimeout(() => {
-            currentNotificationIndex = (currentNotificationIndex + 1) % socialProofData.length;
-            showSocialProof();
-        }, 15000);
+        // Siguiente notificación después de 40 segundos (35s de pausa + 5s de visualización)
+        setTimeout(showSocialProof, 35000);
     }, 5000);
 }
 
@@ -111,11 +126,8 @@ document.getElementById('closeNotification').addEventListener('click', function(
     notification.classList.remove('show');
     clearTimeout(notificationTimeout);
     
-    // Reiniciar ciclo después de 15 segundos
-    setTimeout(() => {
-        currentNotificationIndex = (currentNotificationIndex + 1) % socialProofData.length;
-        showSocialProof();
-    }, 15000);
+    // Siguiente notificación después de 40 segundos (35s de pausa + 5s de visualización)
+    setTimeout(showSocialProof, 35000);
 });
 
 /* ===================================
