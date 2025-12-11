@@ -60,6 +60,194 @@ img {
 }
 
 /* ===================================
+   NUEVOS ESTILOS
+   =================================== */
+.benefits-highlight {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    margin: var(--spacing-lg) 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.benefit-item i {
+    color: var(--color-gold);
+    margin-right: var(--spacing-sm);
+    font-size: 1.2rem;
+}
+
+.price-note {
+    margin-top: var(--spacing-sm);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-gold);
+}
+
+.guarantee {
+    background: rgba(220, 53, 69, 0.1);
+    border-left: 4px solid #dc3545;
+    padding: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    text-align: left;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.guarantee i {
+    color: #dc3545;
+    margin-right: var(--spacing-xs);
+}
+
+/* Lead Magnet */
+.lead-magnet {
+    padding: var(--spacing-xl) 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.lead-box {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.lead-box h3 {
+    color: var(--color-blue-dark);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.5rem;
+}
+
+.lead-box p {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.email-form input[type="email"] {
+    padding: 0.8rem 1rem;
+    border: 2px solid #dee2e6;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.email-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--color-blue);
+}
+
+.privacy-note {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin-top: var(--spacing-sm);
+}
+
+/* Testimonios */
+.testimonials {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--color-white);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.testimonial-card {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-content {
+    position: relative;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    padding-left: var(--spacing-sm);
+    border-left: 3px solid var(--color-gold);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: var(--spacing-sm);
+}
+
+.stars {
+    color: #ffc107;
+    margin-right: var(--spacing-sm);
+}
+
+.testimonial-author span {
+    font-weight: 600;
+    color: var(--color-blue-dark);
+}
+
+/* Video Section */
+.video-section {
+    padding: var(--spacing-xl) 0;
+    background-color: #f8f9fa;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+.urgency-note {
+    color: #dc3545;
+    font-weight: 600;
+    margin-top: var(--spacing-sm);
+    font-size: 1.1rem;
+}
+
+/* ===================================
    UTILIDADES
    =================================== */
 .container {
@@ -91,16 +279,18 @@ img {
     display: block;
     margin: 0 auto;
     max-width: 400px;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    font-weight: 600;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
     text-decoration: none;
-    border-radius: var(--radius-md);
+    border-radius: 50px;
     transition: all 0.3s ease;
     cursor: pointer;
     text-align: center;
     border: none;
     box-shadow: var(--shadow-md);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .cta-primary {
@@ -198,6 +388,9 @@ img {
 .hero-subtitle {
     font-size: 1.4rem;
     margin-bottom: var(--spacing-lg);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -952,6 +1145,25 @@ img {
    =================================== */
 
 /* Tablets */
+/* Estilos responsivos */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .testimonial-card {
+        padding: var(--spacing-md);
+    }
+}
+
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2.2rem;
