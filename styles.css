@@ -964,6 +964,10 @@ img {
     color: var(--color-blue-dark);
 }
 
+.total-price > span:first-child {
+    color: var(--color-gold-dark);
+}
+
 .price-large {
     font-family: var(--font-heading);
     font-size: 2.5rem;
