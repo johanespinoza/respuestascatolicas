@@ -19,16 +19,14 @@ const HOTMART_TOKEN = 'TU_TOKEN_HOTMART_AQUI';
    =================================== */
 
 function initCountdown() {
-    // Verificar si ya existe un tiempo guardado en localStorage
-    let endTime = localStorage.getItem('countdownEndTime');
+    // Obtener la fecha y hora actual
+    const now = new Date();
+    // Calcular la fecha de fin (medianoche de hoy)
+    const endOfDay = new Date(now);
+    endOfDay.setHours(24, 0, 0, 0);
     
-    if (!endTime) {
-        // Si no existe, crear uno nuevo (24 horas desde ahora)
-        endTime = new Date().getTime() + (24 * 60 * 60 * 1000);
-        localStorage.setItem('countdownEndTime', endTime);
-    } else {
-        endTime = parseInt(endTime);
-    }
+    // Usar la hora de finalización del día actual
+    let endTime = endOfDay.getTime();
     
     const countdownInterval = setInterval(function() {
         const now = new Date().getTime();

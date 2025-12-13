@@ -1093,7 +1093,7 @@ img {
     position: fixed;
     bottom: var(--spacing-md);
     left: var(--spacing-md);
-    background: var(--color-white);
+    background-color: #FFA500;
     padding: var(--spacing-sm) var(--spacing-md);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-lg);
