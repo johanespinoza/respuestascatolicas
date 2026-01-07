@@ -749,6 +749,15 @@ img {
 }
 
 /* ===================================
+   PRICE HIGHLIGHT
+   =================================== */
+.highlight-price {
+    font-size: 1.5rem;
+    color: var(--color-blue-dark);
+    margin-left: 0.5rem;
+}
+
+/* ===================================
    6. TESTIMONIOS
    =================================== */
 .testimonials {
@@ -893,6 +902,23 @@ img {
     border-radius: var(--radius-md);
     margin-bottom: var(--spacing-md);
     text-align: center;
+}
+
+.price-box {
+    margin: var(--spacing-md) 0;
+    text-align: center;
+}
+
+.original-price {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+.strike {
+    text-decoration: line-through;
+    color: #dc3545;
+    font-weight: 600;
 }
 
 .old-price {
