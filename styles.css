@@ -911,8 +911,9 @@ img {
 
 .original-price {
     color: var(--color-text-light);
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     margin-top: 0.5rem;
+    font-weight: 600;
 }
 
 .strike {
