@@ -10,7 +10,7 @@
    
    Reemplaza:
    const PAYMENT_LINKS = {
-       mainProduct: '#',  ← AQUÍ va el link del ebook principal ($9.99)
+       mainProduct: '#',  ← AQUÍ va el link del ebook principal ($13.99)
        upsellProduct: '#' ← AQUÍ va el link del Mini Devocionario ($3.99)
    };
    
@@ -69,7 +69,7 @@ Busca y modifica:
 - Subtítulo (línea ~41)
 - Beneficios (líneas ~70-100)
 - Testimonios (líneas ~180-240)
-- Precios (busca "$9.99" y "$3.99")
+- Precios (busca "$13.99" y "$3.99")
 
 
 CAMBIAR IMÁGENES:
@@ -179,7 +179,7 @@ En Google Analytics:
 ═══════════════════════════════════════════════════════════════════
 
 P: ¿Puedo cambiar el precio?
-R: Sí, busca "$9.99" y "$3.99" en index.html y reemplázalos.
+R: Sí, busca "$13.99" y "$3.99" en index.html y reemplázalos.
 
 P: ¿Cómo cambio el tiempo del cronómetro?
 R: En script.js, línea 24, cambia (24 * 60 * 60 * 1000) por las horas que desees.

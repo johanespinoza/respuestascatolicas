@@ -24,7 +24,7 @@ Descubre cómo responder con confianza y amor cristiano.
 ✅ Basado en fuentes católicas auténticas
 ✅ 2 bonos GRATIS incluidos
 
-Solo por 24 horas: $9.99 USD
+Solo por 24 horas: $13.99 USD
 
 [Botón: Descarga ahora]
 ```
@@ -97,13 +97,13 @@ Lee más testimonios y descarga tu copia...
 ## 💰 Estrategias de Precio
 
 ### Precio Psicológico
-- **$9.99** es mejor que $10.00 (percepción de menor costo)
+- **$13.99** es mejor que $10.00 (percepción de menor costo)
 - **$3.99** para el upsell (menos de $5 = compra impulsiva)
 
 ### Bundles
 Ofrece paquetes:
-- **Básico:** Solo ebook principal - $9.99
-- **Completo:** Ebook + Mini Devocionario - $12.99 (ahorro de $0.99)
+- **Básico:** Solo ebook principal - $13.99
+- **Completo:** Ebook + Mini Devocionario - $16.99 (ahorro de $0.99)
 - **Premium:** Ebook + Mini Devocionario + Consulta - $24.99
 
 ### Descuentos Estratégicos
@@ -174,7 +174,7 @@ Anuncio 3: "Únete a 1,000+ católicos que ya fortalecieron su fe"
    - C: Verde
 
 3. **Precio:**
-   - A: $9.99
+   - A: $13.99
    - B: $7.99 (con descuento tachado de $14.99)
 
 4. **Bonos:**
@@ -376,7 +376,7 @@ y el Catecismo."
 - Versículos para cada momento"
 
 [0:55-1:00] LLAMADO A LA ACCIÓN
-"Todo por solo $9.99. Link en la descripción.
+"Todo por solo $13.99. Link en la descripción.
 ¡Fortalece tu fe hoy!"
 ```
 

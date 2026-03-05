@@ -4,7 +4,7 @@
 
 // Links de pago de Hotmart configurados
 const PAYMENT_LINKS = {
-    mainProduct: 'https://pay.hotmart.com/V99799664T?checkoutMode=10', // Link de pago del ebook principal ($9.99)
+    mainProduct: 'https://pay.hotmart.com/V99799664T?checkoutMode=10', // Link de pago del ebook principal ($13.99)
     upsellProduct: 'https://pay.hotmart.com/V99799664T?checkoutMode=10' // Link de pago del Mini Devocionario ($3.99) - Mismo link por ahora
 };
 
@@ -143,7 +143,7 @@ function setupPaymentLinks() {
                 // Tracking de Facebook Pixel (si está configurado)
                 if (typeof fbq !== 'undefined') {
                     fbq('track', 'InitiateCheckout', {
-                        value: 9.99,
+                        value: 13.99,
                         currency: 'USD',
                         content_name: 'Respuestas Católicas a Preguntas Inesperadas'
                     });

@@ -2,7 +2,7 @@
 
 ## 📋 Descripción
 
-Landing page moderna y persuasiva diseñada para vender el ebook "Respuestas Católicas a Preguntas Inesperadas" por $9.99 USD, con una oferta complementaria del "Mini Devocionario Apologético" por $3.99 USD.
+Landing page moderna y persuasiva diseñada para vender el ebook "Respuestas Católicas a Preguntas Inesperadas" por $13.99 USD, con una oferta complementaria del "Mini Devocionario Apologético" por $3.99 USD.
 
 ## ✨ Características
 
@@ -27,7 +27,7 @@ Abre el archivo `script.js` y reemplaza los links de pago:
 
 ```javascript
 const PAYMENT_LINKS = {
-    mainProduct: 'TU_LINK_DE_HOTMART_AQUI', // Ebook principal $9.99
+    mainProduct: 'TU_LINK_DE_HOTMART_AQUI', // Ebook principal $13.99
     upsellProduct: 'TU_LINK_DE_HOTMART_AQUI' // Mini Devocionario $3.99
 };
 ```

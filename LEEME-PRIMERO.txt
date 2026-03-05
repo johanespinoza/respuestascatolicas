@@ -68,7 +68,7 @@
 ═══════════════════════════════════════════════════════════════════════
 
 OBLIGATORIO:
-□ Configurar link de pago principal ($9.99) en script.js
+□ Configurar link de pago principal ($13.99) en script.js
 □ Configurar link de pago upsell ($3.99) en script.js
 □ Activar Pixel de Facebook en index.html (líneas 19-31)
 
