@@ -57,6 +57,114 @@
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
+        
+        /* Estilos para la sección de testimonios */
+        .testimonials {
+            padding: var(--spacing-xl) 0;
+            background: #E5E5E5;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .messenger-chat {
+            background: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .messenger-chat:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .chat-header {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            background: #FFFFFF;
+            border-bottom: 1px solid #E4E6EB;
+        }
+        
+        .chat-avatar {
+            margin-right: 12px;
+        }
+        
+        .chat-avatar img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #E4E6EB;
+        }
+        
+        .chat-info {
+            flex: 1;
+        }
+        
+        .chat-name {
+            font-weight: 600;
+            color: #050505;
+            font-size: 15px;
+            margin-bottom: 2px;
+        }
+        
+        .chat-status {
+            color: #65676B;
+            font-size: 13px;
+        }
+        
+        .chat-time {
+            color: #65676B;
+            font-size: 12px;
+        }
+        
+        .chat-message {
+            padding: 16px;
+        }
+        
+        .chat-message p {
+            color: #050505;
+            font-size: 15px;
+            line-height: 1.4;
+            margin: 0 0 12px 0;
+            font-style: italic;
+        }
+        
+        .message-reactions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        
+        .message-reactions span {
+            background: #F0F2F5;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            color: #050505;
+        }
+        
+        .chat-rating {
+            padding: 12px 16px;
+            background: #F8F9FA;
+            border-top: 1px solid #E4E6EB;
+            text-align: center;
+        }
+        
+        .chat-rating .stars {
+            color: #FFA500;
+            font-size: 14px;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -184,25 +292,50 @@
         <div class="container">
             <h2 class="section-title">Más de 2,000 católicos han fortalecido su fe con esta guía</h2>
             <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"Finalmente puedo responder con seguridad cuando me cuestionan mi fe. ¡Invaluable!"</p>
-                        <div class="testimonial-author">
-                            <div class="stars">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <span>- María G., Catequista</span>
+                <div class="messenger-chat">
+                    <div class="chat-header">
+                        <div class="chat-avatar">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=50&h=50&fit=crop&crop=face&auto=format" alt="María G.">
+                        </div>
+                        <div class="chat-info">
+                            <div class="chat-name">María G.</div>
+                            <div class="chat-status">Catequista</div>
+                        </div>
+                        <div class="chat-time">hace 2 días</div>
+                    </div>
+                    <div class="chat-message">
+                        <p>"Finalmente puedo responder con seguridad cuando me cuestionan mi fe. ¡Invalorable!"</p>
+                        <div class="message-reactions">
+                            <span>❤️ 24</span>
+                        </div>
+                    </div>
+                    <div class="chat-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
+                
+                <div class="messenger-chat">
+                    <div class="chat-header">
+                        <div class="chat-avatar">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face&auto=format" alt="Carlos M.">
+                        </div>
+                        <div class="chat-info">
+                            <div class="chat-name">Carlos M.</div>
+                            <div class="chat-status">Estudiante</div>
+                        </div>
+                        <div class="chat-time">hace 3 días</div>
+                    </div>
+                    <div class="chat-message">
                         <p>"Los argumentos bíblicos son claros y fáciles de recordar. ¡Mi fe nunca había estado tan fuerte!"</p>
-                        <div class="testimonial-author">
-                            <div class="stars">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <span>- Carlos M., Estudiante</span>
+                        <div class="message-reactions">
+                            <span>🙏 18</span>
+                        </div>
+                    </div>
+                    <div class="chat-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                     </div>
                 </div>
