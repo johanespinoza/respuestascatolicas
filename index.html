@@ -33,6 +33,31 @@
         src="https://www.facebook.com/tr?id=1646156149348746&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
+    
+    <style>
+        /* Animación para el precio final */
+        .animate-price {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .animate-price.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .animate-price.show .total-price,
+        .animate-price.show .cta-final {
+            animation: pulse 2s ease-in-out;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
 </head>
 <body>
     
@@ -68,7 +93,7 @@
             
             <!-- Primer botón CTA -->
             <div class="cta-center" style="margin: 30px 0;">
-                <a href="https://pay.hotmart.com/V99799664T?checkoutMode=10" class="cta-button cta-primary" onclick="fbq('track', 'InitiateCheckout'); return true;">ACCEDE AHORA</a>
+                <a href="#bonos" class="cta-button cta-primary scroll-button">ACCEDE AHORA</a>
             </div>
             
             <!-- Cronómetro de urgencia -->
@@ -255,7 +280,7 @@
 
 
     <!-- 5. BONOS GRATUITOS -->
-    <section class="bonuses">
+    <section class="bonuses" id="bonos">
         <div class="container">
             <h2 class="section-title">🎁 Llévate también estos 4 bonos GRATIS</h2>
             <p class="section-subtitle">Por tiempo limitado, estos bonos se incluyen sin costo adicional</p>
@@ -347,7 +372,7 @@
             <h2 class="section-title">Fortalece tu fe y descubre las respuestas que buscabas</h2>
             <p class="section-subtitle">Acceso inmediato tras tu compra. Descarga en cualquier dispositivo.</p>
             
-            <div class="final-offer">
+            <div class="final-offer animate-price">
                 <div class="offer-summary">
                     <h3>Tu pedido incluye:</h3>
                     <ul>
@@ -364,7 +389,7 @@
                 </div>
                 
                 <!-- LINK DE PAGO PRINCIPAL - Reemplaza con tu link de Hotmart -->
-                <a href="https://pay.hotmart.com/V99799664T?checkoutMode=10" class="cta-button cta-final" id="mainPurchaseButton" onclick="fbq('track', 'Purchase', {value: 9.99, currency: 'USD'}); return true;">
+                <a href="https://pay.hotmart.com/V99799664T?checkoutMode=10" class="cta-button cta-final" id="mainPurchaseButton" onclick="fbq('track', 'InitiateCheckout'); return true;">
                     <i class="fas fa-shopping-cart"></i> ACCEDE AHORA POR $9.99
                 </a>
                 

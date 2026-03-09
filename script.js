@@ -133,10 +133,11 @@ document.getElementById('closeNotification').addEventListener('click', function(
    =================================== */
 
 function setupPaymentLinks() {
-    // Botón de compra principal
+    // Botón de compra principal (excluyendo botones de scroll)
     const mainButtons = document.querySelectorAll('.cta-primary, .cta-secondary, .cta-final');
     mainButtons.forEach(button => {
-        if (button.getAttribute('href') === '#comprar' || button.getAttribute('href') === '#') {
+        // Excluir botones que tienen clase scroll-button
+        if (!button.classList.contains('scroll-button') && (button.getAttribute('href') === '#comprar' || button.getAttribute('href') === '#')) {
             button.addEventListener('click', function(e) {
                 e.preventDefault(); // Prevenir comportamiento por defecto
                 
@@ -375,3 +376,45 @@ trackEvent('TrafficSource', {
     medium: trafficMedium,
     campaign: trafficCampaign
 });
+
+/* ===================================
+   ANIMACIÓN DE PRECIO CON INTERSECTION OBSERVER
+   =================================== */
+
+function initPriceAnimation() {
+    const priceElement = document.querySelector('.animate-price');
+    
+    if (!priceElement) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Agregar clase de animación cuando el elemento es visible
+                entry.target.classList.add('show');
+                
+                // Opcional: trackear evento cuando el precio es visible
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'ViewContent', {
+                        content_name: 'Precio Visible - Respuestas Católicas',
+                        content_category: 'Product'
+                    });
+                }
+                
+                // Dejar de observar después de la primera animación
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.3, // Animar cuando 30% del elemento sea visible
+        rootMargin: '0px 0px -50px 0px' // Margen negativo para anticipar la animación
+    });
+    
+    // Empezar a observar el elemento
+    observer.observe(priceElement);
+}
+
+// Inicializar la animación cuando el DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', function() {
+    initPriceAnimation();
+});
+
