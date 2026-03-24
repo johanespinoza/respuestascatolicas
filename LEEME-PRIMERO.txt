@@ -43,7 +43,7 @@
 ✅ 2 bonos gratuitos destacados visualmente
 ✅ Vista previa del ebook principal
 ✅ 4 testimonios con fotos y calificaciones
-✅ Oferta de upsell ($3.99) estratégicamente ubicada
+✅ Oferta - Precios estratégicamente ubicada
 ✅ Sección final de compra con resumen
 ✅ Garantía de satisfacción
 ✅ Footer profesional
@@ -68,7 +68,7 @@
 ═══════════════════════════════════════════════════════════════════════
 
 OBLIGATORIO:
-□ Configurar link de pago principal ($9.99) en script.js
+□ Configurar link de pago principal ($6.99) en script.js
 □ Configurar link de pago upsell ($3.99) en script.js
 □ Activar Pixel de Facebook en index.html (líneas 19-31)
 
